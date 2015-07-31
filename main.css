@@ -72,3 +72,13 @@
     border-radius:25px;
     background-color: #56A0D3;
 }
+.carousel-announcement{
+  height:200px;
+  color:rgb(0,32,96);
+  font-size:32px;
+  background-color:#56A0D3;
+  text-align:center;
+  padding-top:20px;  
+  padding-left:100px;
+  padding-right:100px;
+}
