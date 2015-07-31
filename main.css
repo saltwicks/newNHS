@@ -12,11 +12,12 @@
 }
 
 .jumbotron {
-  background-image:url('http://www.wvnhs.com/wvlogo.png');
-  background-color:#56A0D3;
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #56A0D3;
+  background-image:url('http://www.wvnhs.com/wvlogo.png');
+  
 }
 
 .jumbotron .container {

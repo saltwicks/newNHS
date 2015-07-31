@@ -1,0 +1,88 @@
+[22-Sep-2014 10:20:11] PHP Parse error:  syntax error, unexpected $end in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 4
+[22-Sep-2014 10:20:15] PHP Parse error:  syntax error, unexpected $end in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 4
+[22-Sep-2014 10:41:56] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 10:41:58] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 10:41:59] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 16:36:10] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Host 'box945.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 2
+[22-Sep-2014 16:36:22] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Host 'box945.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 2
+[22-Sep-2014 16:43:10] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Host 'box945.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 2
+[22-Sep-2014 16:50:31] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 6
+[22-Sep-2014 16:52:31] PHP Parse error:  syntax error, unexpected T_STRING, expecting '(' in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 6
+[22-Sep-2014 16:58:48] PHP Parse error:  syntax error, unexpected $end in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 19
+[22-Sep-2014 16:58:49] PHP Parse error:  syntax error, unexpected $end in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 19
+[22-Sep-2014 16:58:50] PHP Parse error:  syntax error, unexpected $end in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 19
+[22-Sep-2014 16:59:02] PHP Parse error:  syntax error, unexpected $end in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 19
+[22-Sep-2014 17:00:10] PHP Warning:  mysql_query(): supplied argument is not a valid MySQL-Link resource in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 6
+[22-Sep-2014 17:01:55] PHP Parse error:  syntax error, unexpected T_DNUMBER in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 2
+[22-Sep-2014 17:02:06] PHP Warning:  mysql_query(): supplied argument is not a valid MySQL-Link resource in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 6
+[22-Sep-2014 17:04:44] PHP Parse error:  syntax error, unexpected T_STRING in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 2
+[22-Sep-2014 17:04:57] PHP Warning:  mysql_query(): supplied argument is not a valid MySQL-Link resource in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 7
+[22-Sep-2014 17:46:29] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'jakepode_user'@'localhost' (using password: YES) in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 17:50:06] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'jakepode_user1'@'localhost' to database 'jakepode_hellodb' in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 17:50:39] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/1129): Host 'box945.bluehost.com' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts' in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 17:56:28] PHP Parse error:  syntax error, unexpected T_STRING in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 17:56:30] PHP Parse error:  syntax error, unexpected T_STRING in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 17:57:46] PHP Parse error:  syntax error, unexpected T_STRING in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 3
+[22-Sep-2014 18:08:00] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, resource given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 14
+[22-Sep-2014 18:08:31] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, resource given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 14
+[22-Sep-2014 18:10:57] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 11
+[22-Sep-2014 18:11:10] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 11
+[22-Sep-2014 18:11:43] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 11
+[22-Sep-2014 18:41:07] PHP Parse error:  syntax error, unexpected '<' in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 9
+[22-Sep-2014 18:43:37] PHP Parse error:  syntax error, unexpected '<' in /home3/jakepode/public_html/wvnhs/phprac/index.php on line 9
+[22-Sep-2014 18:47:59] PHP Parse error:  syntax error, unexpected '<' in /home3/jakepode/public_html/wvnhs/phprac/insert.php on line 19
+[22-Sep-2014 18:48:05] PHP Parse error:  syntax error, unexpected '<' in /home3/jakepode/public_html/wvnhs/phprac/insert.php on line 19
+[22-Sep-2014 19:13:30] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home3/jakepode/public_html/wvnhs/phprac/search.php on line 14
+[22-Sep-2014 19:13:47] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home3/jakepode/public_html/wvnhs/phprac/search.php on line 14
+[22-Sep-2014 19:17:24] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home3/jakepode/public_html/wvnhs/phprac/search.php on line 14
+[22-Sep-2014 19:36:45] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home3/jakepode/public_html/wvnhs/phprac/search.php on line 21
+[23-Sep-2014 10:32:51] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home3/jakepode/public_html/wvnhs/members/all_members.php on line 20
+[24-Sep-2014 08:05:02] PHP Parse error:  syntax error, unexpected ')' in /home3/jakepode/public_html/wvnhs/members/adminRedirect.php on line 13
+[24-Sep-2014 08:05:47] PHP Parse error:  syntax error, unexpected ')' in /home3/jakepode/public_html/wvnhs/members/adminRedirect.php on line 13
+[24-Sep-2014 08:25:07] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 46
+[24-Sep-2014 08:25:16] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 46
+[24-Sep-2014 08:25:26] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 46
+[24-Sep-2014 08:26:02] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 08:26:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 08:26:12] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:05:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:05:27] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 41
+[24-Sep-2014 10:05:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 41
+[24-Sep-2014 10:05:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 41
+[24-Sep-2014 10:05:53] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 41
+[24-Sep-2014 10:05:57] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 41
+[24-Sep-2014 10:06:02] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 41
+[24-Sep-2014 10:06:44] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:06:49] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:06:52] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:07:24] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:07:30] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:07:33] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:07:39] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:08:59] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home3/jakepode/public_html/wvnhs/members/admin.php on line 46
+[24-Sep-2014 10:09:03] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home3/jakepode/public_html/wvnhs/members/admin.php on line 46
+[24-Sep-2014 10:09:25] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[24-Sep-2014 10:09:28] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/jakepode/public_html/wvnhs/members/admin.php:5) in /home3/jakepode/public_html/wvnhs/members/admin.php on line 53
+[30-Sep-2014 10:26:10] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home3/jakepode/public_html/wvnhs/members/index.php on line 28
+[01-Oct-2014 17:28:29] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/members/insert.php on line 15
+[01-Oct-2014 17:28:30] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/jakepode/public_html/wvnhs/members/insert.php on line 16
+[01-Oct-2014 17:30:23] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/members/insert.php on line 15
+[01-Oct-2014 17:30:23] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/jakepode/public_html/wvnhs/members/insert.php on line 16
+[01-Oct-2014 17:30:36] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/members/insert.php on line 15
+[01-Oct-2014 17:30:36] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/jakepode/public_html/wvnhs/members/insert.php on line 16
+[01-Oct-2014 17:31:42] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'jakepode'@'localhost' (using password: NO) in /home3/jakepode/public_html/wvnhs/members/insert.php on line 15
+[01-Oct-2014 17:31:42] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home3/jakepode/public_html/wvnhs/members/insert.php on line 15
+[01-Oct-2014 17:31:42] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home3/jakepode/public_html/wvnhs/members/insert.php on line 16
+[01-Oct-2014 17:34:20] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home3/jakepode/public_html/wvnhs/members/insert.php on line 15
+[18-Nov-2014 17:13:13] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home3/jakepode/public_html/wvnhs/members/index.php on line 21
+[18-Nov-2014 17:13:13] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home3/jakepode/public_html/wvnhs/members/index.php on line 27
+[18-Nov-2014 17:13:13] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home3/jakepode/public_html/wvnhs/members/index.php on line 38
+[18-Nov-2014 17:13:13] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, boolean given in /home3/jakepode/public_html/wvnhs/members/index.php on line 66
+[18-Nov-2014 18:10:24] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home3/jakepode/public_html/wvnhs/members/index.php on line 21
+[18-Nov-2014 18:10:24] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home3/jakepode/public_html/wvnhs/members/index.php on line 27
+[18-Nov-2014 18:10:24] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home3/jakepode/public_html/wvnhs/members/index.php on line 38
+[18-Nov-2014 18:10:24] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, boolean given in /home3/jakepode/public_html/wvnhs/members/index.php on line 66
+[18-Nov-2014 18:41:25] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home3/jakepode/public_html/wvnhs/members/index.php on line 21
+[18-Nov-2014 18:41:25] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home3/jakepode/public_html/wvnhs/members/index.php on line 27
+[18-Nov-2014 18:41:25] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home3/jakepode/public_html/wvnhs/members/index.php on line 38
+[18-Nov-2014 18:41:25] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, boolean given in /home3/jakepode/public_html/wvnhs/members/index.php on line 66
