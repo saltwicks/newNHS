@@ -82,3 +82,12 @@
   padding-left:100px;
   padding-right:100px;
 }
+
+.section-title h1{
+  font-size:48px;
+  margin:0px;
+  text-align:center;
+  text-decoration:underline;
+  color: rgb(0,32,96);
+  background-color:#56A0D3;
+}
