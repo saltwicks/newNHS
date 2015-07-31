@@ -1,0 +1,74 @@
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+
+}
+
+.jumbotron {
+  background-image:url('http://www.wvnhs.com/wvlogo.png');
+  background-color:#56A0D3;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  text-align:center;
+
+  
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+.announcements{
+    background-color:#efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+.announcements h2{
+    color:#393c3d;
+    font-size:24px;
+    }
+.announcements p{
+    font-size:15px;
+    color:rgb(0, 32, 96);
+    margin-bottom:13px;
+    text-align:center;
+    height:150px;
+    padding:30px;
+    border-radius:25px;
+    background-color: #56A0D3;
+}
