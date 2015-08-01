@@ -4,13 +4,13 @@
 
 <link rel="stylesheet" type="text/css" href="tableStyle.css">
 
-<!--<link rel="stylesheet" type="text/css" href="indexStyle.css">-->
+<!--<link rel="stylesheet" type="text/css" href="eventStyle.css">-->
 
-<link rel="stylesheet" href="headbar.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="headbar.css">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<script type="text/javascript" src="headbar.js"></script>
+<script type="text/javascript" src="header.js"></script>
 
 <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
  <!-- Latest compiled and minified CSS -->
@@ -23,13 +23,27 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel= "stylesheet" href= "../bootstrap1.css">
     <link rel="stylesheet" href="../main.css">
+
+
+
 <style>
-  h1{
-      text-align:center;
-      color:rgb(0,32,96);
-  }
+
+.headbar{
+
+margin-top:-4em;
+
+}
+
+h1{
+  color: rgb(0,32,96);
+  text-align:center;
+
+}
 
 </style>
+
+
+
 </head>
 
 <body>
@@ -40,20 +54,21 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="../forms/index.php">Forms</a></li>
           <li><a href="../myStats/index.php">My Stats</a></li>
-          <li><a href="">Members</a></li>
-          <li><a href="../events/index.php">Events</a></li>
+          <li><a href="../members/index.php">Members</a></li>
+          <li><a href="">Events</a></li>
           <li><a href="../admin/index.php">Admin Login</a></li>
           <li><a href="../http://wvnhs.com/signup.php">Create Account</a></li>
         </ul>
       </div>
     </div>
 
-<h1 style= "color: rgb(0,32,96)"> Board </h1>
+<h1>Events</h1>
 
 <?php //starting tag
+//error_reporting(0);
 
-$con = mysqli_connect("localhost", "root", ""); mysqli_select_db($con, "WVNHS");
-
+// Check connection
+$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
 if (mysqli_connect_errno()) {
 
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -62,7 +77,21 @@ if (mysqli_connect_errno()) {
 
 
 
-$result = mysqli_query($con,"SELECT * FROM members ORDER BY Position DESC, Last, First ASC");
+function runMyFunction($input) {
+
+    echo $input;
+
+  }
+
+
+
+//runMyFunction($_GET['eventName']);
+
+
+
+$orderthing = 'Date';
+
+$result = mysqli_query($con,"SELECT * FROM events ORDER BY $orderthing ASC");
 
 
 
@@ -70,13 +99,13 @@ echo "<div class='Table'>
 
 	<table >
 
-        <tr><td>Last</td>
+        <tr><td>Name</td>
 
-		<td >First</td>
+		<td >Date</td>
 
-		<td >Grade</td>
+		<td>Signed Up</td>
 
-		<td>Position</td>
+		<td>Max Spots</td>
 
     </tr>";
 
@@ -98,37 +127,45 @@ while($row = mysqli_fetch_array($result)) {
 
   echo "</tr>";*/
 
-  if($row['Position']!=null){
+  $date = $row['Date'];
+
+  $date2 = date_create($date);
+
+  $eventName = $row['Name'];
+
+  if($eventName != 'KHK')$newName = preg_replace('/(?<!\ )[A-Z]/', ' $0', $eventName);
+
+  else $newName =$eventName;
+
+
 
    echo "<tr>
 
             <td >
 
-             " . $row['Last'] . "
+             <a href ='eventInfo.php?eventName=".$row['Name']."'>" . str_replace("_", " ", $newName) . "</a>
 
             </td>
 
             <td>
 
-              " . $row['First'] . "
-
-            </td>
-
-			<td>
-
-              " . $row['Grade'] . "
+              " . date_format($date2, "M d") . "
 
             </td>
 
             <td>
 
-              " . $row['Position'] . "
+              " . $row['Spots_Taken'] . "
+
+             </td>
+
+			 <td>
+
+              " . $row['Total_Spots'] . "
 
              </td>
 
         </tr>";
-
-  }
 
 }
 
@@ -136,7 +173,7 @@ while($row = mysqli_fetch_array($result)) {
 
 echo "</table>
 
-            </div><br><br><br>";
+            </div>";
 
 
 

@@ -1,0 +1,22 @@
+.signup{
+	position:relative;
+	border-left:1px solid black;
+	color:white;
+	float:right;
+	padding: 0.5em;
+	margin:0.2em;
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	cursor:pointer;
+	z-index:100;
+}
+.headbar{
+	position:fixed;
+	background:-o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
+	background:-moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");	background: -o-linear-gradient(top,#005fbf,003f7f);
+	width:100%;
+	z-index:9999;
+	margin-top:-2em;
+	overflow:hidden;
+	height:2.5em;
+}

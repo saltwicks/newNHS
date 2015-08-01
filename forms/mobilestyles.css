@@ -1,0 +1,17 @@
+.announcmentWrapper{
+	width:100%;
+}
+h2{
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:390px;
+	margin:10px;
+	margin-left: 10%;
+	margin-right: -9%;
+	margin-top: 55px;
+	text-shadow:2px 2px #000;
+}
+#content{
+	padding-bottom: 10em;
+}

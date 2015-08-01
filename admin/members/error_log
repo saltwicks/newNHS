@@ -1,0 +1,9 @@
+[09-Oct-2014 14:17:43] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 48
+[09-Oct-2014 14:18:58] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 49
+[09-Oct-2014 14:19:26] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 49
+[09-Oct-2014 14:20:06] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 49
+[09-Oct-2014 14:20:56] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 49
+[09-Oct-2014 14:21:18] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 49
+[09-Oct-2014 14:21:48] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 49
+[09-Oct-2014 14:22:03] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 49
+[09-Oct-2014 14:22:19] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/jakepode/public_html/wvnhs/admin/members/changeFirst.php on line 49

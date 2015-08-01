@@ -1,0 +1,16 @@
+.announcmentWrapper{
+	width:75%;
+	left:12%;
+}	
+h2{
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:390px;
+	margin:10px;
+	margin-left: 7%;
+	margin-right: -5%;
+	margin-top: 55px;
+	color: white;
+	text-shadow:2px 2px #00
+}

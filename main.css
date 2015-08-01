@@ -1,9 +1,16 @@
+.nav{
+  background-color:white;
+}
+
+
 .nav a {
   color: #5a5a5a;
   font-size: 11px;
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
+
+
 }
 
 .nav li {
@@ -73,6 +80,22 @@
     border-radius:25px;
     background-color: #56A0D3;
 }
+
+
+.myStatsLogin{
+  background-color:#56A0D3;
+  border-style:solid;
+  border-width:5px;
+  border-radius:25px;
+  width:300px;
+  text-align:center;
+  margin:auto;
+  color: rgb(0,32,96);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 5px;
+  text-transform: uppercase;
+}
 .carousel-announcement{
   height:200px;
   color:rgb(0,32,96);
@@ -92,3 +115,4 @@
   color: rgb(0,32,96);
   background-color:#56A0D3;
 }
+

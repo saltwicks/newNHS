@@ -1,0 +1,10 @@
+h1{
+	color:#00007f;
+	font-family: Helvetica;
+	text-align:center;
+	margin-top:2em;
+}
+body{
+	background-color:#B4D8E7;
+	 background: linear-gradient(#B4D8E7, navy);
+}
