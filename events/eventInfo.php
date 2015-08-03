@@ -11,7 +11,17 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="header.js"></script>
+<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel= "stylesheet" href= "../bootstrap1.css">
+    <link rel="stylesheet" href="../main.css">
 	
 
 
@@ -30,23 +40,19 @@ margin-top:-4em;
 
 <body>
 
-<div class = "headbar">
-
-		<div class = "signup" id='signup'>Create Account!</div>
-
-		<div class = "signup" id='admin'>Admin Login</div>
-
-		<div class = "signup" id='events'>Events</div>
-
-		<div class = "signup" id='members'>Members</div>
-
-		<div class = "signup" id='mystats'>My Stats</div>
-
-		<div class = "signup" id='forms'>Forms</div>
-
-		<div class = "signup" id='home'>Home</div>
-
-	</div>
+ <div class="nav">
+      <div class="container">
+        <ul class= "pull-right nav nav-pills">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../forms/index.php">Forms</a></li>
+          <li><a href="../myStats/index.php">My Stats</a></li>
+          <li><a href="../members/index.php">Members</a></li>
+          <li><a href="../events/index.php">Events</a></li>
+          <li><a href="../admin/index.php">Admin Login</a></li>
+          <li><a href="../members/signup.php">Create Account</a></li>
+        </ul>
+      </div>
+    </div>
 
 <?php //starting tag
 

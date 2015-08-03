@@ -39,7 +39,9 @@ h1{
   text-align:center;
 
 }
-
+a{
+  color:rgb(0,32,96);
+}
 </style>
 
 
@@ -57,7 +59,7 @@ h1{
           <li><a href="../members/index.php">Members</a></li>
           <li><a href="">Events</a></li>
           <li><a href="../admin/index.php">Admin Login</a></li>
-          <li><a href="../http://wvnhs.com/signup.php">Create Account</a></li>
+          <li><a href="../members/signup.php">Create Account</a></li>
         </ul>
       </div>
     </div>

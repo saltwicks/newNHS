@@ -43,7 +43,7 @@
           <li><a href="">Members</a></li>
           <li><a href="../events/index.php">Events</a></li>
           <li><a href="../admin/index.php">Admin Login</a></li>
-          <li><a href="../http://wvnhs.com/signup.php">Create Account</a></li>
+          <li><a href="../members/signup.php">Create Account</a></li>
         </ul>
       </div>
     </div>
@@ -98,35 +98,35 @@ while($row = mysqli_fetch_array($result)) {
 
   echo "</tr>";*/
 
-  if($row['Position']!=null){
+  if($row['Position']!=null)
+  {
+       echo "<tr>
 
-   echo "<tr>
+                <td >
 
-            <td >
+                 " . $row['Last'] . "
 
-             " . $row['Last'] . "
+                </td>
 
-            </td>
+                <td>
 
-            <td>
+                  " . $row['First'] . "
 
-              " . $row['First'] . "
+                </td>
 
-            </td>
+    			<td>
 
-			<td>
+                  " . $row['Grade'] . "
 
-              " . $row['Grade'] . "
+                </td>
 
-            </td>
+                <td>
 
-            <td>
+                  " . $row['Position'] . "
 
-              " . $row['Position'] . "
+                 </td>
 
-             </td>
-
-        </tr>";
+            </tr>";
 
   }
 
@@ -140,7 +140,7 @@ echo "</table>
 
 
 
-mysqli_close($con);
+//mysqli_close($con);
 
 
 

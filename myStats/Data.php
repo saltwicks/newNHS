@@ -11,7 +11,17 @@
 <link rel="stylesheet" type="text/css" href="../events/tableStyle.css">
 
 <script type="text/javascript" src="../events/header.js"></script>
+<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel= "stylesheet" href= "../bootstrap1.css">
+<link rel="stylesheet" href="../main.css">
 
 
 
@@ -25,7 +35,8 @@ margin-top:-4em;
 }
 
 .Table{
-
+border:solid 10px #56A0D3;
+border-radius:20px;
 width:80%;
 
 }
@@ -35,7 +46,47 @@ width:80%;
 	color:red;
 
 }
+h1{
+	  color: rgb(0,32,96);
+	  font-size: 40px;
+	  font-weight: bold;
+	  padding: 7px 5px;
+	  text-transform: uppercase;
+	  
+}
 
+h2{
+		color: rgb(0,32,96);
+	  font-size: 32px;
+	  font-weight: bold;
+	  padding: 7px 5px;
+	  text-transform: uppercase;
+	
+}
+body{
+  background: -webkit-linear-gradient(#93C2E3, #2E7AAF); 
+  background: -o-linear-gradient(#93C2E3, #2E7AAF); 
+  background: -moz-linear-gradient(#93C2E3,#2E7AAF); 
+  background: linear-gradient(#93C2E3,#2E7AAF); 
+  background-repeat:no-repeat;
+  height:100%;
+  
+}
+h3{
+	  color: rgb(0,32,96);
+	  font-size: 32px;
+	  font-weight: bold;
+	  padding: 7px 5px;
+	  text-transform: uppercase;
+	background-color:#56A0D3;
+	border-radius:25px;
+	border:solid 3px rgb(0,32,96);
+	text-align:center;
+	width:25%;
+	margin:auto;
+	margin-bottom: 10px;
+
+}
 </style>
 
 
@@ -44,23 +95,18 @@ width:80%;
 
 <body>
 
-<div class = "headbar">
-
-		<div class = "signup" id='signup'>Create Account!</div>
-
-		<div class = "signup" id='admin'>Admin Login</div>
-
-		<div class = "signup" id='events'>Events</div>
-
-		<div class = "signup" id='members'>Members</div>
-
-		<div class = "signup" id='mystats'>My Stats</div>
-
-		<div class = "signup" id='forms'>Forms</div>
-
-		<div class = "signup" id='home'>Home</div>
-
-	</div>
+ <div class="nav">
+      <div class="container">
+        <ul class= "pull-right nav nav-pills">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../forms/index.php">Forms</a></li>
+          <li><a href="../myStats/index.php">My Stats</a></li>
+          <li><a href="../members/index.php">Members</a></li>
+          <li><a href="../events/index.php">Events</a></li>
+          <li><a href="../admin/index.php">Admin Login</a></li>
+          <li><a href="../members/signup.php">Create Account</a></li>
+        </ul>
+      </div>
 
 	
 
@@ -90,7 +136,7 @@ while($row = mysqli_fetch_array($member)) {
 
 	  $pos = $row['Position'];
 
-	  if($pos.length<1)$pos="Member";
+	  //if($pos.length<1)$pos="Member";
 
 	  $email = $row['Email'];
 
@@ -108,7 +154,7 @@ while($row = mysqli_fetch_array($member)) {
 
 echo "<h1>".$name."</h1><br>";
 
-echo "<h2>Statistics<span class='red'>**</span></h2>";
+echo "<h3>Statistics<span class='red'>**</span></h3>";
 
 
 
@@ -219,11 +265,11 @@ echo "<div class = 'announcmentWrapper'>";
 		echo "<ul>";
 
 			echo "<li>20 hours needed by the end of the year, 14 for half year mark.</li><br>";
-
+			echo "<br>";
 			echo "<li>Hours tab includes hours from KHK.</li><br>";
-
+			echo "<br>";
 			echo "<li>1 Group Project needed by half year mark, 2 by the end of the year.</li><br>";
-
+			echo "<br>";
 			echo "<li>Half year mark occurs on February 1st.</li><br>";
 
 		echo "</ul>";
@@ -250,9 +296,11 @@ echo "<div class = 'announcmentWrapper'>";
 
 			//echo "<p>".$eventName."</p><br>";
 
-			$event = mysqli_query($con, "SELECT * From $eventName");
-
-			while($member = mysqli_fetch_array($event)){
+			$eventName = mysqli_query($con, "SELECT * From $eventName");
+			if($eventName === FALSE) { 
+				    die(mysql_error()); 
+			}
+			while($member = mysqli_fetch_array($eventName)){
 
 				$memberID = $member['ID'];
 

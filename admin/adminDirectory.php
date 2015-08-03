@@ -1,7 +1,8 @@
 <html>
 
 <head>
-
+    <link rel= "stylesheet" href= "../bootstrap1.css">
+    <link rel="stylesheet" href="../main.css">
 <link rel="stylesheet" href="headbar.css" type="text/css">
 
 <link rel="stylesheet" href="../events/eventInfoStyle.css" type="text/css">
@@ -9,6 +10,16 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="headbar.js"></script>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 
 <style>
 
@@ -17,6 +28,12 @@
 body{
 
 	margin:0;
+	 background: -webkit-linear-gradient(white,#93C2E3, #2E7AAF); 
+  background: -o-linear-gradient(white,#93C2E3, #2E7AAF); 
+  background: -moz-linear-gradient(white,#93C2E3,#2E7AAF); 
+  background: linear-gradient(white,#93C2E3,#2E7AAF); 
+  background-repeat:no-repeat;
+  height:100%;
 
 }
 
@@ -25,18 +42,26 @@ body{
 margin-top:-4em;
 
 }
-
-a:visited, a:link{
-
-	font-size: xx-large;
-
-	color:white;
-
-	text-shadow:2px 2px #000;
+.nav a{
+	  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
 
 }
 
-li{
+.adminList a{
+
+	font-size: xx-large;
+
+	color:#002060;
+
+	text-shadow:2px 2px white;
+
+}
+
+.adminList li{
 
 	color:white;
 
@@ -48,7 +73,9 @@ li{
 
 }
 
-
+h1{
+	color:#002060;
+}
 
 
 
@@ -58,21 +85,19 @@ li{
 
 <body>
 
-<div class = "headbar">
-
-		<div class = "signup" id='signup'>Create Account!</div>
-
-		<div class = "signup" id='admin'>Admin Login</div>
-
-		<div class = "signup" id='events'>Events</div>
-
-		<div class = "signup" id='members'>Members</div>
-
-		<div class = "signup" id='mystats'>My Stats</div>
-
-		<div class = "signup" id='home'>Home</div>
-
-	</div>
+    <div class="nav">
+      <div class="container">
+        <ul class= "pull-right nav nav-pills">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../forms/index.php">Forms</a></li>
+          <li><a href="../myStats/index.php">My Stats</a></li>
+          <li><a href="../members/index.php">Members</a></li>
+          <li><a href="../events/index.php">Events</a></li>
+          <li><a href="../admin/index.php">Admin Login</a></li>
+          <li><a href="../members/signup.php">Create Account</a></li>
+        </ul>
+      </div>
+    </div>
 
 	
 
@@ -145,21 +170,21 @@ $pass = mysqli_real_escape_string($con, $_POST['passcode']);
 </div></div>-->
 
 
+<div class="adminList">
+	<ul>
 
-<ul>
+		<li><a href = 'members?pass=a12B7low8'>View All Members</a></li>
 
-	<li><a href = 'http://wvnhs.com/admin/members?pass=a12B7low8'>View All Members</a></li>
+		<li><a href = 'eventForm.php?pass=a12B7low8'>Create Event</a></li>
 
-	<li><a href = 'http://wvnhs.com/admin/eventForm.php?pass=a12B7low8'>Create Event</a></li>
+		<li><a href = 'deleteEvent.php?pass=a12B7low8'>Delete Event</a></li>
 
-	<li><a href = 'http://wvnhs.com/admin/deleteEvent.php?pass=a12B7low8'>Delete Event</a></li>
+		<!--<li><a href = 'http://wvnhs.com/admin/manageMeetings.php?pass=a12B7low8'>Add/Remove Meeting</a></li>-->
 
-	<!--<li><a href = 'http://wvnhs.com/admin/manageMeetings.php?pass=a12B7low8'>Add/Remove Meeting</a></li>-->
+		<li><a href = 'eventMemberList.php?pass=a12B7low8'>See Members for Events</a></li>
 
-	<li><a href = 'http://wvnhs.com/admin/eventMemberList.php?pass=a12B7low8'>See Members for Events</a></li>
-
-</ul>
-
+	</ul>
+</div>
 
 
 
