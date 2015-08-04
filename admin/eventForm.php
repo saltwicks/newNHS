@@ -7,7 +7,17 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="headbar.js"></script>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel= "stylesheet" href= "bootstrap1.css">
+    <link rel="stylesheet" href="main.css">
 <style>
 
 
@@ -50,11 +60,7 @@ body{
 
 }
 
-.headbar{
 
-margin-top:-3em;
-
-}
 
 
 
@@ -66,21 +72,6 @@ margin-top:-3em;
 
 <body>
 
-<div class = "headbar">
-
-		<div class = "signup" id='signup'>Create Account!</div>
-
-		<div class = "signup" id='admin'>Admin Login</div>
-
-		<div class = "signup" id='events'>Events</div>
-
-		<div class = "signup" id='members'>Members</div>
-
-		<div class = "signup" id='mystats'>My Stats</div>
-
-		<div class = "signup" id='home'>Home</div>
-
-	</div>
 
 
 

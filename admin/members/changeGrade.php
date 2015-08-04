@@ -17,13 +17,7 @@ margin-top:-4em;
 </style>
 </head>
 <body>
-<div class = "headbar">
-		<div class = "signup" id='signup'>Create Account!</div>
-		<div class = "signup" id='admin'>Admin Login</div>
-		<div class = "signup" id='events'>Events</div>
-		<div class = "signup" id='members'>Members</div>
-		<div class = "signup" id='home'>Home</div>
-	</div>
+
 	
 
 <?php	
@@ -42,7 +36,7 @@ echo "<br>id is ".$id;
 $member = mysqli_query($con,"SELECT * FROM members WHERE ID=$id");
 
 	 if($newVal!="")mysqli_query($con,"UPDATE members SET Grade='$newVal' WHERE ID=$id");
-	 echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin/members?pass=a12B7low8'</script>";
+	 echo "<script type='text/javascript'>window.location.href = '../members?pass=a12B7low8'</script>";
 
 mysqli_close($con);
 ?>

@@ -81,7 +81,6 @@ while($row = mysqli_fetch_array($result)) {
 	$event = $row['Name'];
 
 	echo "<a href = 'http://wvnhs.com/admin/delete.php?name=".$event."'>".$event."</a><br>";
-
 }
 
 ?>

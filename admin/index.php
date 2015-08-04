@@ -89,7 +89,10 @@ body{
 .adminClass{
   background-color:#56A0D3;
 }
-
+.affix{
+  top: 0;
+  width: 100%;
+}
 
 
 

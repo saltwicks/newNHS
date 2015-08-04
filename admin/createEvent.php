@@ -166,7 +166,7 @@ $file_name = preg_replace("'", "&#39", $file_name);
 
 
 
-	echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/events'</script>";
+	echo "<script type='text/javascript'>window.location.href = '../events'</script>";
 
 }
 

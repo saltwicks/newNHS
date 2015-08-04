@@ -88,7 +88,7 @@ unlink("../events/uploads/".$event.".txt");
 
 
 
-echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin/deleteEvent.php?pass=a12B7low8'</script>";
+echo "<script type='text/javascript'>window.location.href = '../admin/deleteEvent.php?pass=a12B7low8'</script>";
 
 
 

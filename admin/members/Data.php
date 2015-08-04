@@ -39,7 +39,9 @@ margin-top:-4em;
 width:70%;
 
 }
+body{
 
+}
 </style>
 
 
@@ -48,7 +50,7 @@ width:70%;
 
 <body>
 
- <div class="nav">
+ <div class="nav" >
       <div class="container">
         <ul class= "pull-right nav nav-pills">
           <li><a href="../index.html">Home</a></li>

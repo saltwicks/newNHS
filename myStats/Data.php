@@ -87,6 +87,10 @@ h3{
 	margin-bottom: 10px;
 
 }
+    .affix{
+      top: 0;
+      width: 100%;
+    }
 </style>
 
 
@@ -95,7 +99,7 @@ h3{
 
 <body>
 
- <div class="nav">
+ <div class="nav"data-spy="affix">
       <div class="container">
         <ul class= "pull-right nav nav-pills">
           <li><a href="../index.html">Home</a></li>

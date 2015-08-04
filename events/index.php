@@ -42,6 +42,10 @@ h1{
 a{
   color:rgb(0,32,96);
 }
+.affix{
+  top: 0;
+  width: 100%;
+}
 </style>
 
 
@@ -50,7 +54,7 @@ a{
 
 <body>
 
- <div class="nav">
+ <div class="nav"data-spy="affix">
       <div class="container">
         <ul class= "pull-right nav nav-pills">
           <li><a href="../index.html">Home</a></li>

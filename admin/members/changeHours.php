@@ -17,13 +17,7 @@ margin-top:-4em;
 </style>
 </head>
 <body>
-<div class = "headbar">
-		<div class = "signup" id='signup'>Create Account!</div>
-		<div class = "signup" id='admin'>Admin Login</div>
-		<div class = "signup" id='events'>Events</div>
-		<div class = "signup" id='members'>Members</div>
-		<div class = "signup" id='home'>Home</div>
-	</div>
+   
 	
 
 <?php	
@@ -56,7 +50,7 @@ else if($_POST['add']){
 
 	}
 
-	 echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin/members?pass=a12B7low8'</script>";
+	 echo "<script type='text/javascript'>window.location.href = '../members?pass=a12B7low8'</script>";
 
 mysqli_close($con);
 ?>

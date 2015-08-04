@@ -6,13 +6,14 @@
 
 	<link rel="stylesheet" type="text/css" href="../events/eventInfoStyle.css">
 
-	<link rel="stylesheet" type="text/css" href="../events/headbar.css">
+
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="../events/header.js"></script>
-<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-<!-- Latest compiled and minified CSS -->
+
+	    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+ <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -20,9 +21,8 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<link rel= "stylesheet" href= "../bootstrap1.css">
-<link rel="stylesheet" href="../main.css">
-	
+    <link rel= "stylesheet" href= "../bootstrap1.css">
+    <link rel="stylesheet" href="../main.css">
 
 
 
@@ -47,21 +47,11 @@ h2{
 	text-align: left;
 
 }
-
-.remove{
-
-	float:right;
-
-	color:red;
-
-	font-weight: bolder;
-
-}
 body{
-	  background: -webkit-linear-gradient(#93C2E3, #2E7AAF); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#93C2E3, #2E7AAF); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#93C2E3,#2E7AAF); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#93C2E3,#2E7AAF); /* Standard syntax */
+		  background: -webkit-linear-gradient(#93C2E3, #2E7AAF); 
+  background: -o-linear-gradient(#93C2E3, #2E7AAF); 
+  background: -moz-linear-gradient(#93C2E3,#2E7AAF); 
+  background: linear-gradient(#93C2E3,#2E7AAF); 
   background-repeat:no-repeat;
   height:100%;
 }
@@ -69,7 +59,7 @@ body{
 
 <body>
 
- <div class="nav" >
+    <div class="nav" >
       <div class="container">
         <ul class= "pull-right nav nav-pills">
           <li><a href="../index.html">Home</a></li>
@@ -81,7 +71,7 @@ body{
           <li><a href="../members/signup.php">Create Account</a></li>
         </ul>
       </div>
-</div>
+    </div>
 
 <?php //starting tag
 
@@ -94,31 +84,15 @@ if (mysqli_connect_errno()) {
 
 }
 
-
-
-$pass = $_GET['pass'];
-
-if($pass!="a12B7low8"){
-
-	echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin'</script>";
-
-}
-
-
-
-$result = mysqli_query($con,"SELECT * FROM Events ORDER BY Name ASC, Date ASC");
+$result = mysqli_query($con,"SELECT * FROM Events ORDER BY Date ASC, Name ASC");
 
 
 
 echo "<div class='announcmentWrapper' id='announcment'>
 
-		 <div class='announcment'>
+		 	<div class='announcment'>
 
-		 	<h1>Admin Event Page</h1>";
-
-
-
-
+		 	<h1>Grand Master Bardi Page</h1>";
 
 while($row = mysqli_fetch_array($result)) {
 
@@ -130,39 +104,31 @@ while($row = mysqli_fetch_array($result)) {
 
 	
 
-//	if(substr($row['Name'],0,7)!='Library'){  // make sure its not a bardi event
-
-	if(true){ 
+	if(substr($row['Name'],0,7)==='Library'){
 
 		echo "<hr class ='experiencehr'/>";
 
 		echo "<h2>".
 
-		preg_replace('/(?<!\ )[A-Z]/', ' $0',$row['Name'])
+			date_format($date2, "l,  F d")
 
 		." - ".
 
-			date_format($date2, "l,  F d")
+			preg_replace('/(?<!\ )[0-9]/', ' $0',(substr($row['Name'],15,strlen($row['Name'])-1)))
 
-		." </h2>"
-
-		;
+		." </h2>";
 
 
 
 		$eventName = $row['Name'];
 
-		$result2 = mysqli_query($con, "SELECT * FROM $eventName"); // Get the event table
+		$result2 = mysqli_query($con, "SELECT * FROM $eventName");
 
 		echo "<ol>";
 
 		while($row2 = mysqli_fetch_array($result2)){
 
-			echo "<li>".$row2['FirstName']." ".$row2['LastName']; // print the members
-
-			$userID = $row2['ID'];
-
-			echo "<a href ='http://www.wvnhs.com/admin/removeFromEvent.php?id=$userID&event=$eventName'><span class = 'REMOVE'>Remove</span></a></li><br>";
+			echo "<li>".$row2['FirstName']." ".$row2['LastName']."</li><br>";
 
 		}
 
@@ -170,7 +136,15 @@ while($row = mysqli_fetch_array($result)) {
 
 		
 
-	}	
+	}
+
+	else{
+
+	//	echo (substr($row['Name'],0,6));
+
+	}
+
+	
 
 
 

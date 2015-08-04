@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>WVNHS Board!</title>
+		<title>WVNHS Forms</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=8" />
 		
@@ -27,6 +27,15 @@
 		<link rel= "stylesheet" href= "../bootstrap1.css">
 		<link rel="stylesheet" href="../main.css">
 <style>
+	body{
+		   background: -webkit-linear-gradient(#93C2E3, #2E7AAF); 
+		  background: -o-linear-gradient(#93C2E3, #2E7AAF); 
+		  background: -moz-linear-gradient(#93C2E3,#2E7AAF); 
+		  background: linear-gradient(#93C2E3,#2E7AAF); 
+		  background-repeat:no-repeat;
+		  height:100%;
+  
+	}
 	.headbar{
 		margin-top:-5em;
 	}
@@ -42,24 +51,28 @@
 	body{
 		text-align: left;
 	}
+	.affix{
+		  top: 0;
+		  width: 100%;
+		}
 	.hide{
 		color: rgba(0,0,0,0);
 		text-shadow:none;
 	}
 	h1{
 		margin-bottom: -80px;
+		margin-top:50px;
 		color: rgb(0,32,96);
 		  font-size: 40px;
 		  font-weight: bold;
 		  padding: 7px 5px;
 		  text-transform: uppercase;
+		  text-align:center;
 		  background-color:#56A0D3;
 		  border-radius:25px;
 	}
 
-	body{
-		background-color:#56A0D3;
-	}
+
 </style>
 
 <script>
@@ -133,6 +146,7 @@
           <li><a href="../../members/signup.php">Create Account</a></li>
         </ul>
       </div>
+ </div>
       <h1 class="formTitle">Forms</h1>
 	<br><br><br><br><br><br>
 	
@@ -147,7 +161,7 @@
 			
 			<h2>T-Shirt Form (Coming Soon!)</h2><h2><span class = "hide">   .    </span></h2>
 			
-			<!--<div id="content">
+			<div id="content">
 				<div class="mosaic-block fade">
 					<a target ="_blank" href = "files/tshirts.pdf" class="mosaic-overlay">
 						<div class="details">
@@ -157,7 +171,7 @@
 					</a>
 					<div class="mosaic-backdrop"><img src="img/tshirtsThumb.jpg"/></div>
 				</div>
-			</div>-->
+			</div>
 
 
 			<div class="clearfix"></div>

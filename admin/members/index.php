@@ -28,11 +28,18 @@
 
 .Table{
 
-width:70%;
+width:100%;
 
 }
 .nav{
 	background-color:white;
+}
+.nav a{
+	  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
 }
 body{
 	  background: -webkit-linear-gradient(#93C2E3, #2E7AAF); 
@@ -42,6 +49,18 @@ body{
   background-repeat:no-repeat;
   height:100%;
 }
+h1{
+	background-color:#56A0D3;
+	border-radius:25px;
+	color:#002060;
+	border:solid 3px ;
+	text-align:center;
+	margin-top:50px;
+}
+    .affix{
+      top: 0;
+      width: 100%;
+      }
 </style>
 
 
@@ -50,19 +69,19 @@ body{
 
 <body>
 
- <div class="nav">
+ <div class="nav" data-spy="affix" >
       <div class="container">
         <ul class= "pull-right nav nav-pills">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../forms/index.php">Forms</a></li>
-          <li><a href="../myStats/index.php">My Stats</a></li>
-          <li><a href="../members/index.php">Members</a></li>
-          <li><a href="../events/index.php">Events</a></li>
-          <li><a href="../admin/index.php">Admin Login</a></li>
-          <li><a href="../members/signup.php">Create Account</a></li>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../forms/index.php">Forms</a></li>
+          <li><a href="../../myStats/index.php">My Stats</a></li>
+          <li><a href="../../members/index.php">Members</a></li>
+          <li><a href="../../events/index.php">Events</a></li>
+          <li><a href="../../admin/index.php">Admin Login</a></li>
+          <li><a href="../../members/signup.php">Create Account</a></li>
         </ul>
       </div>
-
+</div>
 <h1> Members </h1>
 
 <?php //starting tag

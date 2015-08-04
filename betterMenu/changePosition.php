@@ -17,7 +17,19 @@ margin-top:-4em;
 </style>
 </head>
 <body>
-
+    <div class="nav" >
+      <div class="container">
+        <ul class= "pull-right nav nav-pills"  data-offset-top="205">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="forms/index.php">Forms</a></li>
+          <li><a href="myStats/index.php">My Stats</a></li>
+          <li><a href="members/index.php">Members</a></li>
+          <li><a href="events/index.php">Events</a></li>
+          <li><a href="admin/index.php">Admin Login</a></li>
+          <li><a href="members/signup.php">Create Account</a></li>
+        </ul>
+      </div>
+    </div>
 	
 
 <?php	
@@ -37,7 +49,7 @@ if (mysqli_connect_errno()) {
 	
 	if($newVal!="")mysqli_query($con,"UPDATE members SET Position='$newVal' WHERE ID=$id");
 	
-	echo "<script type='text/javascript'>window.location.href = '../members?pass=a12B7low8'</script>";
+	echo "<script type='text/javascript'>window.location.href = '../admin/members?pass=a12B7low8'</script>";
 
 mysqli_close($con);
 ?>
