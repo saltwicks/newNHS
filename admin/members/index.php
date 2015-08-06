@@ -1,18 +1,5 @@
 <html>
-
 <head>
-
-<link rel="stylesheet" type="text/css" href="../../members/tableStyle.css">
-
-<link rel="stylesheet" type="text/css" href="../../members/indexStyle.css">
-
-<link rel="stylesheet" href="../../members/headbar.css" type="text/css">
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<script type="text/javascript" src="../../members/headbar.js"></script>
-<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -20,58 +7,34 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<link rel= "stylesheet" href= "../bootstrap1.css">
-<link rel="stylesheet" href="../main.css">
+    <link rel= "stylesheet" href= "../../bootstrap1.css">
+    <link rel="stylesheet" href="../../main.css">
+<script>
+$(document).ready(function () {
 
+    (function ($) {
 
+        $('#filter').keyup(function () {
+
+            var rex = new RegExp($(this).val(), 'i');
+            $('.searchable tr').hide();
+            $('.searchable tr').filter(function () {
+                return rex.test($(this).text());
+            }).show();
+
+        })
+
+    }(jQuery));
+
+});
+</script>
 <style>
 
-.Table{
-
-width:100%;
-
-}
-.nav{
-	background-color:white;
-}
-.nav a{
-	  color: #5a5a5a;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 14px 10px;
-  text-transform: uppercase;
-}
-body{
-	  background: -webkit-linear-gradient(#93C2E3, #2E7AAF); 
-  background: -o-linear-gradient(#93C2E3, #2E7AAF); 
-  background: -moz-linear-gradient(#93C2E3,#2E7AAF); 
-  background: linear-gradient(#93C2E3,#2E7AAF); 
-  background-repeat:no-repeat;
-  height:100%;
-}
-h1{
-	background-color:#56A0D3;
-	border-radius:25px;
-	color:#002060;
-	border:solid 3px ;
-	text-align:center;
-	margin-top:50px;
-}
-    .affix{
-      top: 0;
-      width: 100%;
-      }
 </style>
-
-
-
 </head>
-
-<body>
-
- <div class="nav" data-spy="affix" >
+    <div class="nav">
       <div class="container">
-        <ul class= "pull-right nav nav-pills">
+        <ul class= "pull-right nav nav-pills" >
           <li><a href="../../index.html">Home</a></li>
           <li><a href="../../forms/index.php">Forms</a></li>
           <li><a href="../../myStats/index.php">My Stats</a></li>
@@ -81,14 +44,8 @@ h1{
           <li><a href="../../members/signup.php">Create Account</a></li>
         </ul>
       </div>
-</div>
-<h1> Members </h1>
-
+    </div>
 <?php //starting tag
-
-
-
-// Check connection
 $con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
 if (mysqli_connect_errno()) {
 
@@ -96,211 +53,180 @@ if (mysqli_connect_errno()) {
 
 }
 
-	$pass = $_GET['pass'];
+    $pass = $_GET['pass'];
 
-	if($pass!="a12B7low8"){
+    if($pass!="a12B7low8"){
 
-		echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin'</script>";
+        echo "<script type='text/javascript'>window.location.href = '../admin'</script>";
 
-	}
-
-
+    }
 
 $result = mysqli_query($con,"SELECT * FROM members ORDER BY Position DESC, Last, First ASC");
 
 
 
-echo "<div class='Table'>
 
-	<table >
+echo '<div class="input-group"> <span class="input-group-addon">Search</span>
 
-        <tr><td>Last</td>
+    <input id="filter" type="text" class="form-control" placeholder="Type here...">
+</div>';
 
-		<td >First</td>
-
-		<td >Grade</td>
-
-		<td>Position</td>
-
-		<td>User Identification</td>
-
-		<td>Email</td>
-
-		<td>Hours</td>
-
-		<td>Group Project</td>
-
-		<td>KHK</td>
-
-    </tr>";
-
-
-
-
-
+echo '<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Last</th>
+            <th>First</th>
+            <th>Grade</th>
+            <th>Position</th>
+            <th>User ID</th>
+            <th>Email</th>
+            <th>Hours</th>
+            <th>Group Projects</th>
+            <th>KHK</th>
+        </tr>
+    </thead>';
 while($row = mysqli_fetch_array($result)) {
-
-  
-
-   echo "<tr>
+  echo '<tbody class="searchable">
+        <tr>
 
             <td >
 
-             " . $row['Last'] . "
+             ' . $row['Last'] . '
 
-			 <form action='changeLast.php?id=".$row['ID']."' method='post'>
+             <form action="changeLast.php?id='.$row["ID"].'" method="post">
 
-				<br> <input type='text' name='newValue'>
+                <br> <input type="text" name="newValue">
 
-				<input type='submit'>
+                <input type="submit">
 
-			</form>
-
-			</td>
-
-            <td>
-
-              " . $row['First'] . "
-
-			  <form action='changeFirst.php?id=".$row['ID']."' method='post'>
-
-				<br> <input type='text' name='newValue'>
-
-				<input type='submit'>
-
-			</form>
-
-            </td>
-
-			<td>
-
-              " . $row['Grade'] . "
-
-			  <form action='changeGrade.php?id=".$row['ID']."' method='post'>
-
-				<br> <input type='text' name='newValue'>
-
-				<input type='submit'>
-
-			</form>
+            </form>
 
             </td>
 
             <td>
 
-              " . $row['Position'] . "
+              ' . $row["First"] . '
 
-			  <form action='changePosition.php?id=".$row['ID']."' method='post'>
+              <form action="changeFirst.php?id='.$row["ID"].'" method="post">
 
-				<br> <input type='text' name='newValue'>
+                <br> <input type="text" name="newValue">
 
-				<input type='submit'>
+                <input type="submit">
 
-			</form>
+            </form>
 
-             </td>
+            </td>
 
-			 <td>
+            <td>
 
-              ".$row['ID']."
+              ' . $row["Grade"] . '
 
-			  <form action='changeID.php?id=".$row['ID']."' method='post'>
+              <form action="changeGrade.php?id='.$row["ID"].'" method="post">
 
-				<br> <input type='text' name='newValue'>
+                <br> <input type="text" name="newValue">
 
-				<input type='submit'>
+                <input type="submit">
 
-			</form>
+            </form>
 
-             </td>
+            </td>
 
-			 <td>
+            <td>
 
-              ".$row['Email']."
+              ' . $row["Position"] . '
 
-			  <form action='changeEmail.php?id=".$row['ID']."' method='post'>
+              <form action="changePosition.php?id='.$row["ID"].'" method="post">
 
-				<br> <input type='text' name='newValue'>
+                <br> <input type="text" name="newValue">
 
-				<input type='submit'>
+                <input type="submit">
 
-			</form>
-
-             </td>
-
-			 <td>
-
-              ".$row['Hours']." hours of 10 hours
-
-			  <form action='changeHours.php?id=".$row['ID']."' method='post'>
-
-				<br> <input type='text' name='newValue'>
-
-				<input type='submit' name='add' value='add'>
-
-				<input type='submit' name='change' value='change'>
-
-			</form>
+            </form>
 
              </td>
 
-			 <td>
+             <td>
 
-              ".$row['Group_Project']." of 2 projects
+              '.$row["ID"].'
 
-			  <form action='changeGP.php?id=".$row['ID']."' method='post'>
+              <form action="changeID.php?id='.$row["ID"].'" method="post">
 
-				<br> <input type='text' name='newValue'>
+                <br> <input type="text" name="newValue">
 
-				<input type='submit' name='add' value='add'>
+                <input type="submit">
 
-				<input type='submit' name='change' value='change'>
-
-			</form>
+            </form>
 
              </td>
 
-			 <td>
+             <td>
 
-              ".$row['KHK']." hours of 5 hours
+              '.$row["Email"].'
 
-			  <form action='changeKHK.php?id=".$row['ID']."' method='post'>
+              <form action="changeEmail.php?id='.$row["ID"].'" method="post">
 
-				<br> <input type='text' name='newValue'>
+                <br> <input type="text: name="newValue">
 
-				<input type='submit' name='add' value='add'>
+                <input type="submit">
 
-				<input type='submit' name='change' value='change'>
+            </form>
 
-			</form>
+             </td>
+
+             <td>
+
+              '.$row["Hours"].' hours of 10 hours
+
+              <form action="changeHours.php?id='.$row["ID"].'" method="post">
+
+                <br> <input type="text" name="newValue">
+
+                <input type="submit" name="add" value="add">
+
+                <input type="submit" name="change" value="change">
+
+            </form>
+
+             </td>
+
+             <td>
+
+              '.$row["Group_Project"].' of 2 projects
+
+              <form action="changeGP.php?id='.$row["ID"].'" method="post">
+
+                <br> <input type="text" name="newValue">
+
+                <input type="submit" name="add" value="add">
+
+                <input type="submit" name="change" value="change">
+
+            </form>
+
+             </td>
+
+             <td>
+
+              '.$row["KHK"].' hours of 5 hours
+
+              <form action="changeKHK.php?id='.$row["ID"].'" method="post">
+
+                <br> <input type="text" name="newValue">
+
+                <input type="submit" name="add" value="add">
+
+                <input type="submit" name="change" value="change">
+
+            </form>
 
              </td>
 
         </tr>";
-
+    </tbody>';
 }
 
-
-
-echo "</table>
-
-            </div>";
-
-
-
-
-
-
+echo '</table>';
 
 mysqli_close($con);
-
-
-
 //ending tag ?>
-
-
-
-</body>
-
 </html>
-

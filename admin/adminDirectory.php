@@ -143,7 +143,7 @@ $pass = mysqli_real_escape_string($con, $_POST['passcode']);
 
 	if(!$isAdmin)
 
-		echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin'</script>";
+		echo "<script type='text/javascript'>window.location.href = '../admin'</script>";
 
 ?>
 

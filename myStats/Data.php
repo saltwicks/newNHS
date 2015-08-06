@@ -64,12 +64,12 @@ h2{
 	
 }
 body{
-  background: -webkit-linear-gradient(#93C2E3, #2E7AAF); 
-  background: -o-linear-gradient(#93C2E3, #2E7AAF); 
-  background: -moz-linear-gradient(#93C2E3,#2E7AAF); 
-  background: linear-gradient(#93C2E3,#2E7AAF); 
+  /*background: -webkit-linear-gradient(#56A0D3, #56A0D3); 
+  background: -o-linear-gradient(#56A0D3, #56A0D3); 
+  background: -moz-linear-gradient(#56A0D3,#56A0D3); 
+  background: linear-gradient(#56A0D3,#56A0D3); */
   background-repeat:no-repeat;
-  height:100%;
+  
   
 }
 h3{
@@ -87,10 +87,7 @@ h3{
 	margin-bottom: 10px;
 
 }
-    .affix{
-      top: 0;
-      width: 100%;
-    }
+
 </style>
 
 
@@ -99,7 +96,7 @@ h3{
 
 <body>
 
- <div class="nav"data-spy="affix">
+ <div class="nav">
       <div class="container">
         <ul class= "pull-right nav nav-pills">
           <li><a href="../index.html">Home</a></li>
@@ -111,7 +108,7 @@ h3{
           <li><a href="../members/signup.php">Create Account</a></li>
         </ul>
       </div>
-
+ </div>
 	
 
 <?php //starting tag
