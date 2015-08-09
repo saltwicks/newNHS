@@ -100,7 +100,7 @@ $pass = $_GET['pass'];
 
 if($pass!="a12B7low8"){
 
-	echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin'</script>";
+	echo "<script type='text/javascript'>window.location.href = '../admin'</script>";
 
 }
 
@@ -162,7 +162,7 @@ while($row = mysqli_fetch_array($result)) {
 
 			$userID = $row2['ID'];
 
-			echo "<a href ='http://www.wvnhs.com/admin/removeFromEvent.php?id=$userID&event=$eventName'><span class = 'REMOVE'>Remove</span></a></li><br>";
+			echo "<a href ='removeFromEvent.php?id=$userID&event=$eventName'><span class = 'REMOVE'>Remove</span></a></li><br>";
 
 		}
 

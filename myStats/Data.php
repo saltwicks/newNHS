@@ -297,11 +297,9 @@ echo "<div class = 'announcmentWrapper'>";
 
 			//echo "<p>".$eventName."</p><br>";
 
-			$eventName = mysqli_query($con, "SELECT * From $eventName");
-			if($eventName === FALSE) { 
-				    die(mysql_error()); 
-			}
-			while($member = mysqli_fetch_array($eventName)){
+			$event = mysqli_query($con, "SELECT * From $eventName");
+			
+			while($member = mysqli_fetch_array($event)){
 
 				$memberID = $member['ID'];
 
@@ -311,7 +309,7 @@ echo "<div class = 'announcmentWrapper'>";
 
 					echo "<p>You ";
 
-					if ($opening_date > $current_date)
+					if ($date > $current_date)
 
 					  echo "are attending ";
 

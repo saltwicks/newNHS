@@ -150,7 +150,7 @@ $member = mysqli_query($con,"SELECT * FROM members WHERE ID='$id'");
 
 			echo "<script type='text/javascript'>alert('Sorry, no spots left');</script>";
 
-			echo "<script type='text/javascript'>window.location.href = 'http://www.wvnhs.com/events/eventInfo.php?eventName=".$event."'</script>";
+			echo "<script type='text/javascript'>window.location.href = '../events/eventInfo.php?eventName=".$event."'</script>";
 
 		}
 
@@ -180,7 +180,7 @@ $member = mysqli_query($con,"SELECT * FROM members WHERE ID='$id'");
 
 
 
-			echo "<script type='text/javascript'>window.location.href = 'http://www.wvnhs.com/events/eventInfo.php?eventName=".$event."'</script>";
+			echo "<script type='text/javascript'>window.location.href = '../events/eventInfo.php?eventName=".$event."'</script>";
 
 		}
 

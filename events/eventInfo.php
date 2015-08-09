@@ -53,6 +53,7 @@ margin-top:-4em;
         </ul>
       </div>
     </div>
+ </div>
 
 <?php //starting tag
 
@@ -143,7 +144,7 @@ echo "<div class='announcmentWrapper' id='announcment'>
 
 				 //echo "<p><li>".$row['FirstName']." ".$row['LastName']."</li></p><br>";
 
-					echo"<p> To see if you have signed up for this event, please check your <a href ='http://www.wvnhs.com/myStats'>My Stats</a> page!</p>";
+					echo"<p> To see if you have signed up for this event, please check your <a href ='../myStats'>My Stats</a> page!</p>";
 
 			//	 }
 

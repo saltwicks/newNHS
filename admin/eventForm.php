@@ -95,7 +95,7 @@ if (mysqli_connect_errno()) {
 
 	if($pass!="a12B7low8"){
 
-		echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin'</script>";
+		echo "<script type='text/javascript'>window.location.href = 'index.php'</script>";
 
 	}
 

@@ -32,6 +32,12 @@
       top: 0;
       width: 100%;
     }
+body{
+  background: -webkit-linear-gradient(#002060, #56A0D3); 
+  background: -o-linear-gradient(#002060, #56A0D3); 
+  background: -moz-linear-gradient(#002060,#56A0D3); 
+  background: linear-gradient(#002060,#56A0D3);
+}
 </style>
 </head>
 

@@ -95,7 +95,7 @@ NAMES SHOULD NOT HAVE NUMBERS OF SPACES, ID's SHOULD BE 8 NUMBERS, AND GRADE IS 
 
 		<p>
 
-			Member signups have been closed at this time. If you are yet to sign up please contant a <a href ='http://www.wvnhs.com/members'> board member </a>.
+			Member signups have been closed at this time. If you are yet to sign up please contact a <a href ='../members'> board member </a>.
 
 			<br>Thank You!
 

@@ -46,7 +46,7 @@ echo "Problem encountered";
 
 
 
-echo "<script type='text/javascript'>window.location.href = 'http://wvnhs.com/admin/mailForm.php'</script>";
+echo "<script type='text/javascript'>window.location.href = '../admin/mailForm.php'</script>";
 
 
 
