@@ -78,7 +78,7 @@ body{
 <?php	
 
 // Check connection
-$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
+$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHSV2");
 if (mysqli_connect_errno()) {
 
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -114,6 +114,7 @@ if (mysqli_connect_errno()) {
 	<div class ="formfield">Date: (YYYY-MM-DD)<br> <input type="text" name="date"></div>
 
 	<div class ="formfield">Spots: <br> <input type="text" name="spots"></div><br>
+	<div class= "formfield">Credits: <br><input type= "text" name = "credits"></div><br>
 
 	<label for="file">Descrtiption:</label><br>
 

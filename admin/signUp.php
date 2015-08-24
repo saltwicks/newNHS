@@ -34,7 +34,7 @@
 
 
 // Check connection
-$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
+$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHSV2");
 if (mysqli_connect_errno()) {
 
   echo "Failed to connect to MySQL: " . mysqli_connect_error();

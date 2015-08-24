@@ -46,7 +46,7 @@ $(document).ready(function () {
       </div>
     </div>
 <?php //starting tag
-$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
+$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHSV2");
 if (mysqli_connect_errno()) {
 
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -71,6 +71,7 @@ echo '<div class="input-group"> <span class="input-group-addon">Search</span>
     <input id="filter" type="text" class="form-control" placeholder="Type here...">
 </div>';
 
+/* class="table table-striped" -----------------for actual table, replace with this----nothing-width="100%" border="0" cellspacing="0" cellpadding="0"*/
 echo '<table class="table table-striped">
     <thead>
         <tr>
@@ -80,9 +81,8 @@ echo '<table class="table table-striped">
             <th>Position</th>
             <th>User ID</th>
             <th>Email</th>
-            <th>Hours</th>
-            <th>Group Projects</th>
-            <th>KHK</th>
+            <th>Credits</th>
+            
         </tr>
     </thead>';
 while($row = mysqli_fetch_array($result)) {
@@ -175,25 +175,9 @@ while($row = mysqli_fetch_array($result)) {
 
              <td>
 
-              '.$row["Hours"].' hours of 10 hours
+              '.$row["Credits"].'  of 100 credits
 
-              <form action="changeHours.php?id='.$row["ID"].'" method="post">
-
-                <br> <input type="text" name="newValue">
-
-                <input type="submit" name="add" value="add">
-
-                <input type="submit" name="change" value="change">
-
-            </form>
-
-             </td>
-
-             <td>
-
-              '.$row["Group_Project"].' of 2 projects
-
-              <form action="changeGP.php?id='.$row["ID"].'" method="post">
+              <form action="changeCredits.php?id='.$row["ID"].'" method="post">
 
                 <br> <input type="text" name="newValue">
 
@@ -205,22 +189,7 @@ while($row = mysqli_fetch_array($result)) {
 
              </td>
 
-             <td>
-
-              '.$row["KHK"].' hours of 5 hours
-
-              <form action="changeKHK.php?id='.$row["ID"].'" method="post">
-
-                <br> <input type="text" name="newValue">
-
-                <input type="submit" name="add" value="add">
-
-                <input type="submit" name="change" value="change">
-
-            </form>
-
-             </td>
-
+             
         </tr>";
     </tbody>';
 }

@@ -21,7 +21,7 @@
 
 
 // Check connection
-$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
+$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHSV2");
 if (mysqli_connect_errno()) {
 
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -78,13 +78,13 @@ else{
 
 	$date = mysqli_real_escape_string($con, $_POST['date']);
 
-	$spots = mysqli_real_escape_string($con, $_POST['spots']);;
+	$spots = mysqli_real_escape_string($con, $_POST['spots']);
+	$credits_worth= mysqli_real_escape_string($con,$_POST['credits']);
 
 
+	$sql="INSERT INTO Events (Name, Date, Spots_Taken, Total_Spots, Credits_Worth)
 
-	$sql="INSERT INTO Events (Name, Date, Spots_Taken, Total_Spots)
-
-	VALUES ('$eventName', '$date', '0', '$spots')";
+	VALUES ('$eventName', '$date', '0', '$spots', '$credits_worth')";
 
 
 

@@ -65,7 +65,7 @@ h2{
  <div class="nav">
       <div class="container">
         <ul class= "pull-right nav nav-pills">
-         <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="../forms/index.php">Forms</a></li>
           <li><a href="../myStats/index.php">My Stats</a></li>
           <li><a href="../members/index.php">Members</a></li>
@@ -78,7 +78,7 @@ h2{
  </div>
 
 <?php //starting tag
-
+session_start();
 
 
 // Check connection
@@ -91,13 +91,8 @@ if (mysqli_connect_errno()) {
 
 
 
-echo "<h1>Removing From Event</h1><br><br>";
+echo "<h1>Adding Credits</h1><br><br>";
 
-
-
-$id = $_GET['id'];
-
-$eventName = $_GET['event'];
 
 
 

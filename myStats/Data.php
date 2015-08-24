@@ -114,7 +114,7 @@ h3{
 <?php //starting tag
 
 // Check connection
-$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
+$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHSV2");
 if (mysqli_connect_errno()) {
 
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -124,7 +124,10 @@ if (mysqli_connect_errno()) {
 
 
 $id = mysqli_real_escape_string($con, $_POST['id']);
-
+//check if ID field is empty
+if($id == ""){
+	echo "<script type='text/javascript'>window.location.href = 'index.php'</script>";
+}
 
 
 $member = mysqli_query($con,"SELECT * FROM members WHERE ID=$id");
@@ -141,13 +144,7 @@ while($row = mysqli_fetch_array($member)) {
 
 	  $email = $row['Email'];
 
-	  $khk=$row['KHK'];
-
-	  $gp =$row['Group_Project'];
-
-	  $hours =$row['Hours'];
-
-	  $meetings =$row['Meetings'];
+	  $credits=$row['Credits'];
 
 	 }
 
@@ -175,16 +172,9 @@ echo "<h3>Statistics<span class='red'>**</span></h3>";
 
 		<td>Email</td>
 
-		<td>Hours</td>
+		<td>Credits</td>
 
-		<td>Group Project</td>
-
-		<td>KHK</td>
-
-		<td>Total</td>
-
-		
-
+	
     </tr>";
 
 	
@@ -223,29 +213,11 @@ echo "<h3>Statistics<span class='red'>**</span></h3>";
 
 			 <td>
 
-              ".($hours+$khk)." hours
+              ".($credits)." of 100
 
              </td>
 
-			 <td>
-
-              ".$gp." of 2 projects
-
-             </td>
-
-			 <td>
-
-              ".$khk." hours of 5 hours
-
-             </td>
-
-			 <td>
-
-              ".(($hours+$khk)+($gp*4))." eq. hours of 20 hours
-
-             </td>
-
-        </tr></table></div><br><br>";
+	        </tr></table></div><br><br>";
 
 
 
@@ -255,7 +227,7 @@ $current_date = new DateTime();
 
 
 
-echo "<div class = 'announcmentWrapper'>";
+/*echo "<div class = 'announcmentWrapper'>";
 
 	echo "<div class = 'announcment'>";
 
@@ -275,7 +247,7 @@ echo "<div class = 'announcmentWrapper'>";
 
 		echo "</ul>";
 
-echo "</div></div>";
+echo "</div></div>";*/
 
 
 

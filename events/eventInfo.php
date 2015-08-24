@@ -59,7 +59,7 @@ margin-top:-4em;
 
 
 // Check connection
-$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
+$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHSV2");
 if (mysqli_connect_errno()) {
 
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -81,6 +81,7 @@ while($row = mysqli_fetch_array($result)) {
   $spotsTaken=$row['Spots_Taken'];
 
   $totalSpots=$row['Total_Spots'];
+  $credits_worth= $row['Credits_Worth'];
 
  }
 
@@ -116,7 +117,7 @@ echo "<div class='announcmentWrapper' id='announcment'>
 
 				<hr class = 'experiencehr'>
 
-				<p>Spots Taken: ".$spotsTaken."<br>Total Spots: ".$totalSpots."
+				<p>Spots Taken: ".$spotsTaken."<br>Total Spots: ".$totalSpots." <br>Gives ".$credits_worth. " credits
 
 				
 

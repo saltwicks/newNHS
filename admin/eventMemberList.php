@@ -86,8 +86,9 @@ body{
 <?php //starting tag
 
 
+
 // Check connection
-$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHS");
+$con = mysqli_connect("localhost", "root", "");mysqli_select_db($con, "WVNHSV2");
 if (mysqli_connect_errno()) {
 
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -120,6 +121,8 @@ echo "<div class='announcmentWrapper' id='announcment'>
 
 
 
+session_start(); //start session
+$events= array();
 while($row = mysqli_fetch_array($result)) {
 
 	$date = $row['Date'];
@@ -132,8 +135,11 @@ while($row = mysqli_fetch_array($result)) {
 
 //	if(substr($row['Name'],0,7)!='Library'){  // make sure its not a bardi event
 
-	if(true){ 
-
+	
+		$eventName = $row['Name'];
+		$events[]= $row['Name'];
+		$result2 = mysqli_query($con, "SELECT * FROM $eventName"); // Get the event table
+		
 		echo "<hr class ='experiencehr'/>";
 
 		echo "<h2>".
@@ -148,33 +154,41 @@ while($row = mysqli_fetch_array($result)) {
 
 		;
 
-
-
-		$eventName = $row['Name'];
-
-		$result2 = mysqli_query($con, "SELECT * FROM $eventName"); // Get the event table
+		
+		
 
 		echo "<ol>";
-
+		
+		$users= array();
+		
 		while($row2 = mysqli_fetch_array($result2)){
 
 			echo "<li>".$row2['FirstName']." ".$row2['LastName']; // print the members
-
+			
 			$userID = $row2['ID'];
-
+			$users[] = $row2['ID'];				
+			$_SESSION['users'] = $users; //creates session array
 			echo "<a href ='removeFromEvent.php?id=$userID&event=$eventName'><span class = 'REMOVE'>Remove</span></a></li><br>";
 
 		}
-
+		$_SESSION['events']['user'] = $users;
+		//echo implode('<br>', $_SESSION['events']['user']);
+		//echo implode('<br>',$users); //prints the IDs
+		//echo "<br>".$eventName;
+		echo implode('<br>',$_SESSION['users']); //prints the IDs
+		echo "<br>". $_SESSION['event'];
+		//echo ' <form action="changeCredits.php?id=".$row["ID"]. method="post"><input type="submit" name="add" value="ADD HOURS">';
+		echo "<a href ='test.php'><span class = 'REMOVE'>ADD CREDITS</span></a>";
+			
 		echo "</ol>";
 
 		
 
-	}	
+	}
 
 
 
- }
+ 
 
  echo "</div></div>";
 
