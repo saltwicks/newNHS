@@ -145,7 +145,7 @@ while($row = mysqli_fetch_array($event)) {
 
 
 
-echo "<script type='text/javascript'>window.location.href = ../admin/adminDirectory.php?pass=a12B7low8'</script>";
+//echo "<script type='text/javascript'>window.location.href = ../admin/adminDirectory.php?pass=a12B7low8'</script>";
 
 
 
@@ -163,7 +163,7 @@ mysqli_close($con);
 
 ?>
 
-
+<script type='text/javascript'>window.location.href = 'eventMemberList.php?pass=a12B7low8'</script>
 
 
 

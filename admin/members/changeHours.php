@@ -37,16 +37,16 @@ $member = mysqli_query($con,"SELECT * FROM members WHERE ID=$id");
 
 if ($_POST['change']){
 	if($newVal!="")
-	mysqli_query($con,"UPDATE members SET Hours='$newVal' WHERE ID=$id");
+	mysqli_query($con,"UPDATE members SET Credits='$newVal' WHERE ID=$id");
 }
 else if($_POST['add']){
 		
 	$oldVal=0;
 	while($row = mysqli_fetch_array($member)) {
-		$oldVal = $row['Hours'];
+		$oldVal = $row['Credits'];
 	}
 	$newVal+=$oldVal;
-	mysqli_query($con,"UPDATE members SET Hours='$newVal' WHERE ID=$id");
+	mysqli_query($con,"UPDATE members SET Credits='$newVal' WHERE ID=$id");
 
 	}
 

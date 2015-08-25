@@ -78,7 +78,7 @@ h2{
  </div>
 
 <?php //starting tag
-session_start();
+
 
 
 // Check connection
@@ -93,7 +93,9 @@ if (mysqli_connect_errno()) {
 
 echo "<h1>Adding Credits</h1><br><br>";
 
+$id = $_GET['id'];
 
+$eventName = $_GET['event'];
 
 
 $event = mysqli_query($con,"SELECT * FROM Events WHERE Name='$eventName'");
@@ -102,61 +104,36 @@ $member = mysqli_query($con,"SELECT * FROM members WHERE ID='$id'");
 
 
 
+
 $membersInEvent = mysqli_query($con,"SELECT * FROM $eventName WHERE ID='$id'");
 
+	$credits=0;
+	while($row = mysqli_fetch_array($event)) {
+		$credits = $row['Credits_Worth'];
+		//echo $credits. " Credits";
+	}
 
 
-while($member = mysqli_fetch_array($membersInEvent)) {
+while($member1 = mysqli_fetch_array($membersInEvent)) {
 
-	echo "Removing ".$member['FirstName']." ".$member['LastName']." from ".$eventName;
-
-}
-
-
-
-$del = mysqli_query($con,"DELETE FROM $eventName WHERE ID='$id'"); //Delete the member from the event
-
-
-
-while($row = mysqli_fetch_array($event)) {
-
-	
-
-	$oldSpotsTaken = $row['Spots_Taken'];
-
-	$newSpotsTaken = $oldSpotsTaken-1;
-
-	 
-
-	 mysqli_query($con, "UPDATE Events
-
-	 SET Spots_Taken=$newSpotsTaken 
-
-	 WHERE Name = '$eventName'");
-
-	
+	echo "Adding ".$credits." credit(s) to ".$member1['FirstName']." ".$member1['LastName']." for ".$eventName;
 
 }
-
-
-
-echo "<script type='text/javascript'>window.location.href = ../admin/adminDirectory.php?pass=a12B7low8'</script>";
-
-
-
-
-
-
-
-
+$oldVal=0;
+while($row2=mysqli_fetch_array($member)){
+	$oldVal= $row2['Credits'];
+}
+	
+	$newVal= $oldVal+$credits;
+	mysqli_query($con,"UPDATE members SET Credits='$newVal' WHERE ID=$id");
 
 
 
 mysqli_close($con);
 
 
-
 ?>
+<script type='text/javascript'>window.location.href = 'eventMemberList.php?pass=a12B7low8'</script>
 
 
 

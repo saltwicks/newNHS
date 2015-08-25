@@ -121,7 +121,7 @@ echo "<div class='announcmentWrapper' id='announcment'>
 
 
 
-session_start(); //start session
+
 $events= array();
 while($row = mysqli_fetch_array($result)) {
 
@@ -167,18 +167,19 @@ while($row = mysqli_fetch_array($result)) {
 			
 			$userID = $row2['ID'];
 			$users[] = $row2['ID'];				
-			$_SESSION['users'] = $users; //creates session array
-			echo "<a href ='removeFromEvent.php?id=$userID&event=$eventName'><span class = 'REMOVE'>Remove</span></a></li><br>";
+			//$_SESSION['users'] = $users; //creates session array
+			echo "<a href ='removeFromEvent.php?id=$userID&event=$eventName'><span class = 'REMOVE'>Remove</span></a></li><br>  
+			<a href ='addCredits.php?id=$userID&event=$eventName'><span class = 'REMOVE'>ADD CREDITS</span></a></li><br><br>";
 
 		}
-		$_SESSION['events']['user'] = $users;
+		//$_SESSION['events']['user'] = $users;
 		//echo implode('<br>', $_SESSION['events']['user']);
 		//echo implode('<br>',$users); //prints the IDs
 		//echo "<br>".$eventName;
-		echo implode('<br>',$_SESSION['users']); //prints the IDs
-		echo "<br>". $_SESSION['event'];
+		//echo implode('<br>',$_SESSION['users']); //prints the IDs
+		//echo "<br>". $_SESSION['event'];
 		//echo ' <form action="changeCredits.php?id=".$row["ID"]. method="post"><input type="submit" name="add" value="ADD HOURS">';
-		echo "<a href ='test.php'><span class = 'REMOVE'>ADD CREDITS</span></a>";
+		//echo "<a href ='test.php'><span class = 'REMOVE'>ADD CREDITS</span></a>";
 			
 		echo "</ol>";
 
