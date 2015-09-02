@@ -303,6 +303,27 @@ echo "<div class = 'announcmentWrapper'>";
 
 	echo "</div></div>";
 
+		while($row = mysqli_fetch_array($events)){
+
+			$eventName = $row['Name'];
+			$creditsAdded= $row['Credits_Added'];
+			$date = $row['Date'];
+			$event = mysqli_query($con, "SELECT * From $eventName");
+			
+			while($member = mysqli_fetch_array($event)){
+
+				$memberID = $member['ID'];
+
+				//echo "<p>".$memberID."</p><br>";
+
+				if($memberID===$id){
+					if($creditsAdded==1)
+					{
+
+					}
+				}
+			}
+		}
 
 
 mysqli_close($con);

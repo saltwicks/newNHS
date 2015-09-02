@@ -108,12 +108,18 @@ $member = mysqli_query($con,"SELECT * FROM members WHERE ID='$id'");
 $membersInEvent = mysqli_query($con,"SELECT * FROM $eventName WHERE ID='$id'");
 
 	$credits=0;
+	$creditTally=0;
+	$spotsTaken=0;
 	while($row = mysqli_fetch_array($event)) {
 		$credits = $row['Credits_Worth'];
-		//echo $credits. " Credits";
+		$creditTally= $row['Credit_Tally'];
+		$totalSpots= $row['Total_Spots'];
+		$spotsTaken= $row['Spots_Taken'];
+		
 	}
+echo $creditTally;
 
-
+if($creditTally < $totalSpots){
 while($member1 = mysqli_fetch_array($membersInEvent)) {
 
 	echo "Adding ".$credits." credit(s) to ".$member1['FirstName']." ".$member1['LastName']." for ".$eventName;
@@ -126,14 +132,23 @@ while($row2=mysqli_fetch_array($member)){
 	
 	$newVal= $oldVal+$credits;
 	mysqli_query($con,"UPDATE members SET Credits='$newVal' WHERE ID=$id");
+	$creditTally+=1;
+	echo $creditTally. "<br>";
+	mysqli_query($con, "UPDATE events SET Credit_Tally = '$creditTally' WHERE Name= '$eventName' ");
+	echo $spotsTaken;
+	if($creditTally == $spotsTaken ){
+		mysqli_query($con, "UPDATE events SET Credits_Added = '1' Where Name= '$eventName'");
+	}
 
-
-
+}
+else{
+	echo "Credits have already been added for this event.";
+}
 mysqli_close($con);
 
 
 ?>
-<script type='text/javascript'>window.location.href = 'eventMemberList.php?pass=a12B7low8'</script>
+<!--<script type='text/javascript'>window.location.href = 'eventMemberList.php?pass=a12B7low8'</script>-->
 
 
 
