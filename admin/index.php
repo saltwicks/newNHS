@@ -31,7 +31,7 @@
 
 	background-color:white;
 
-	padding:2em;
+	
 
 	width:25%;
 	background-color:#56A0D3;
@@ -49,9 +49,9 @@
 
 .formfield{
 
-	margin:0 auto;
+	
 
-	width:50%;
+	width:100%;
 
 	display:inline-block;
 

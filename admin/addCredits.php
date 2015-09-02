@@ -117,7 +117,7 @@ $membersInEvent = mysqli_query($con,"SELECT * FROM $eventName WHERE ID='$id'");
 		$spotsTaken= $row['Spots_Taken'];
 		
 	}
-echo $creditTally;
+
 
 if($creditTally < $totalSpots){
 while($member1 = mysqli_fetch_array($membersInEvent)) {
@@ -133,9 +133,9 @@ while($row2=mysqli_fetch_array($member)){
 	$newVal= $oldVal+$credits;
 	mysqli_query($con,"UPDATE members SET Credits='$newVal' WHERE ID=$id");
 	$creditTally+=1;
-	echo $creditTally. "<br>";
+	
 	mysqli_query($con, "UPDATE events SET Credit_Tally = '$creditTally' WHERE Name= '$eventName' ");
-	echo $spotsTaken;
+	
 	if($creditTally == $spotsTaken ){
 		mysqli_query($con, "UPDATE events SET Credits_Added = '1' Where Name= '$eventName'");
 	}
@@ -148,7 +148,7 @@ mysqli_close($con);
 
 
 ?>
-<!--<script type='text/javascript'>window.location.href = 'eventMemberList.php?pass=a12B7low8'</script>-->
+<script type='text/javascript'>window.location.href = 'eventMemberList.php?pass=a12B7low8'</script>
 
 
 

@@ -1,0 +1,51 @@
+.titleBoxWrapper{
+
+margin:10em 0;
+
+}
+
+.announcmentWrapper{
+
+width:100%;
+
+}
+
+.announcement ul,li{
+
+	font-size: xx-large;
+
+}
+
+.announcment p{
+
+font-size:xx-large;
+
+}
+
+.announcment h2{
+
+font-size:xx-large;
+
+}
+
+html {
+
+    height: 100%;
+
+}
+
+body {
+
+    height: 100%;
+
+    margin: 0;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+
+
+    background: linear-gradient(#B4D8E7, #2A72BF);
+
+}
